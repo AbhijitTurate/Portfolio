@@ -257,7 +257,7 @@ footer .fa-brands {
     background-color: #21222A;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-around;
     padding: 2.5rem;
 }
@@ -333,8 +333,9 @@ footer .fa-brands {
 
     .footer{
         gap: 1rem;
-        padding: 2rem;
-
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
     }
     .iconimage{
         width:3rem
