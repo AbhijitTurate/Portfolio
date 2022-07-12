@@ -15,6 +15,21 @@ li {
     list-style: none;
 }
 
+.heading{
+    font-size: 3.5rem;
+    color: #66FCF1;
+    text-align: center;
+}
+
+
+
+.subheading{
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    color: #fcfcfc;
+   
+}
+
 .section {
     margin-top: 6.4rem;
 }
@@ -183,6 +198,97 @@ main {
     width: 100%;
 }
 
+
+/* PROJECT SECTION */
+.section_name{
+    font-size: 4rem;
+    color: #66FCF1;
+    text-align: center;
+    margin-block-end: 8rem;
+
+}
+
+
+.project_item{
+    min-height: 50rem;
+    padding: 1rem;
+    
+}
+
+.project_list:first-child{
+    margin-top: 10rem;
+}
+
+.project_title{
+   
+       text-align: center;
+        font-size: 2.5rem;
+        color: #66FCF1;
+    }
+
+.project_description{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 3rem;
+    /* min-height: 40rem;
+    max-height: 60rem; */
+}
+
+.project_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1.5;
+    gap:1.5rem
+}
+.project_info{
+    font-size: 2rem;
+    color: #fcfcfc;
+}
+
+.technology{
+    font-size: 2rem;
+    color: #fcfcfc;
+}
+
+.link_button{
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.7rem;
+    color: #21222A;
+    /* color: #FCFCFC; */
+    background-color: #66FCF1;
+    /* padding: 2rem; */
+
+}
+
+.link_button:hover{
+    color: #66FCF1;
+    background-color: #21222A;
+
+}
+.link_button:hover .fa-link{
+    color: #66FCF1;
+}
+
+.fa-link{
+    padding-right: 1rem;
+    color: #21222A;
+}
+.project_image{
+    flex: 1;
+    object-fit: cover;
+
+}
+.project_img{
+    max-width: 100%;
+    margin-left: auto;
+}
+/* ABOUT SECTION */
+
 .about {
     display: flex;
     flex-direction: row;
@@ -292,7 +398,7 @@ footer .fa-brands {
 
 
      .home {
-        height: 75vh;
+        height: 80vh;
         /* display: flex;
         flex-direction: column;
         /* align-items: center;
@@ -300,12 +406,12 @@ footer .fa-brands {
         /* text-align: center;  */
     }
 
-    /* .introduction {
-        justify-content: justify;
-    } */
+    .introduction {
+        gap: 1rem;
+    } 
 
     .intro_heading{
-        font-size: 3.3rem;
+        font-size: 3.4rem;
     }
 
     .handwave--image {
