@@ -141,6 +141,7 @@ main {
     padding: 5rem 10rem;
 }
 
+
 .home {
     min-height: 73vh;
     display: flex;
@@ -327,6 +328,7 @@ main {
 
 .contact {
     text-align: center;
+    margin-block-end: 5rem;
 }
 
 .contact_heading {
