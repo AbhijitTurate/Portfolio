@@ -31,7 +31,7 @@ li {
 }
 
 .section {
-    margin-top: 6.4rem;
+    margin-top: 8rem;
 }
 
 header {
@@ -142,10 +142,11 @@ main {
 }
 
 .home {
-    height: 82vh;
+    min-height: 73vh;
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap:3rem;
     justify-content: space-between;
 }
 
@@ -153,6 +154,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex:1.15;
     /* flex-wrap: wrap; */
 }
 
@@ -188,10 +190,11 @@ main {
 }
 
 .profile_picture {
-    width: 50rem;
-    height: 50rem;
-    /* justify-content: center;
-    place-content: center; */
+    /* width: 50rem;
+    height: 50rem; */
+    flex:1;
+    display: grid;
+    place-content: center;
 }
 
 .profile_picture img {
@@ -205,19 +208,29 @@ main {
     color: #66FCF1;
     text-align: center;
     margin-block-end: 8rem;
-
 }
+
+.project_list{
+    display: flex;
+    flex-direction: column;
+    gap:5rem
+}
+
 
 
 .project_item{
-    min-height: 50rem;
-    padding: 1rem;
-    
+    /* min-height: 45rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.project_list:first-child{
-    margin-top: 10rem;
+.project_item:nth-child(even) .project_description{
+    flex-direction: row-reverse;
 }
+/* .project_list:first-child{
+    margin-top: 10rem;
+} */
 
 .project_title{
    
@@ -240,7 +253,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1.5;
+    flex: 1;
     gap:1.5rem
 }
 .project_info{
@@ -250,7 +263,7 @@ main {
 
 .technology{
     font-size: 2rem;
-    color: #fcfcfc;
+    color: #66FCF1;
 }
 
 .link_button{
@@ -259,6 +272,7 @@ main {
     padding: 1rem 1.5rem;
     border-radius: 0.7rem;
     color: #21222A;
+    /* font-weight: 300; */
     /* color: #FCFCFC; */
     background-color: #66FCF1;
     /* padding: 2rem; */
@@ -281,7 +295,6 @@ main {
 .project_image{
     flex: 1;
     object-fit: cover;
-
 }
 .project_img{
     max-width: 100%;
@@ -432,6 +445,30 @@ footer .fa-brands {
         font-size: 1.8rem;
     }
     
+    /* Project Section */
+    .project_item:nth-child(even) .project_description{
+        flex-direction: column-reverse;
+    }
+    .project_description{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        /* margin-block-start: 2rem; */
+    }
+
+    .project_item{
+        gap: 2rem;
+    }
+    .project_content{
+        align-items: center;
+    }
+    .project_info,
+    .technology,
+    .link_button{
+        font-size: 1.8rem;
+    }
+    .technology{
+        color: #66FCF1;
+    }
     .contact_heading{
         font-size: 2.5rem;
 
