@@ -223,13 +223,7 @@ main {
 
 
 
-.project_info,
-.technology,
-.link_button{
-    font-size: 1.8rem;
-    line-height: 1.4;
-    letter-spacing: 0.1rem;
-}
+
 
 .project_title{
    
@@ -246,10 +240,20 @@ main {
 
 .project_content{
     @include flex-set(column,1.5rem);
-    align-items: flex-start;
     flex: 1;
-  
+    align-items: center;
+    text-align: center;
 }
+
+.project_info,
+.technology,
+.link_button{
+   
+    font-size: 1.8rem;
+    line-height: 1.4;
+    letter-spacing: 0.1rem;
+}
+
 .project_info{
     color: $primary-font-color;
 }
@@ -451,11 +455,14 @@ footer .fa-brands {
         gap: 2rem;
     }
     .project_content{
-        align-items: center;
+       text-align: center;
+       align-items: center;
     }
     .project_info,
     .technology,
     .link_button{
+    text-align: center;
+    align-items: center;
     font-size: 1.6rem;
     line-height: 1.3;
     letter-spacing: 0.1rem;
@@ -492,10 +499,15 @@ footer .fa-brands {
         display: inline;
     }
 
+    .project_content{
+        text-align: center;
+        align-items: center;
+    }
     .profile_picture{
         object-fit: contain;
     }
     .project_list{
+        text-align: center;
         align-items: center;
     }
     .project_item:nth-child(even) .project_description{
@@ -505,6 +517,7 @@ footer .fa-brands {
         @include flex-set(column-reverse,2rem);
     }
     .project_item{
+        text-align: center;
         max-width: 60rem;
     }
 }

@@ -214,14 +214,6 @@ main {
   flex-direction: row-reverse;
 }
 
-.project_info,
-.technology,
-.link_button {
-  font-size: 1.8rem;
-  line-height: 1.4;
-  letter-spacing: 0.1rem;
-}
-
 .project_title {
   text-align: center;
   font-size: 2.5rem;
@@ -239,8 +231,17 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: flex-start;
   flex: 1;
+  align-items: center;
+  text-align: center;
+}
+
+.project_info,
+.technology,
+.link_button {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: 0.1rem;
 }
 
 .project_info {
@@ -449,11 +450,14 @@ footer .fa-brands {
     gap: 2rem;
   }
   .project_content {
+    text-align: center;
     align-items: center;
   }
   .project_info,
 .technology,
 .link_button {
+    text-align: center;
+    align-items: center;
     font-size: 1.6rem;
     line-height: 1.3;
     letter-spacing: 0.1rem;
@@ -483,11 +487,16 @@ footer .fa-brands {
   .addBreak {
     display: inline;
   }
+  .project_content {
+    text-align: center;
+    align-items: center;
+  }
   .profile_picture {
     -o-object-fit: contain;
        object-fit: contain;
   }
   .project_list {
+    text-align: center;
     align-items: center;
   }
   .project_item:nth-child(even) .project_description {
@@ -499,6 +508,7 @@ footer .fa-brands {
     gap: 2rem;
   }
   .project_item {
+    text-align: center;
     max-width: 60rem;
   }
 }/*# sourceMappingURL=style.css.map */
