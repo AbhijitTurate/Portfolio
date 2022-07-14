@@ -9,6 +9,7 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -76,10 +77,20 @@ padding: 2rem;
 }
 
 .hamburger {
-    width: 5rem;
+    /* width: 5rem;
     height: 5rem;
-    border: 0.1rem solid red;
+    border: 0.1rem solid red; */
+    margin-right: 2rem;
+    cursor: pointer;
     display: none;
+}
+
+.bar{
+    display: block;
+    width: 2.5rem;
+    height: 0.3rem;
+    margin: 0.5rem auto;
+    background-color: #FCFCFC;
 }
 
 .navLinks {
@@ -179,6 +190,9 @@ main {
     /* margin-top: 2rem; */
 }
 
+.hide{
+    display: none;
+}
 .profession {
     font-size: 2.5rem;
     color: #c5c6c7;
@@ -233,6 +247,13 @@ main {
     margin-top: 10rem;
 } */
 
+
+.project_info,
+.technology,
+.link_button{
+    font-size: 1.65rem
+}
+
 .project_title{
    
        text-align: center;
@@ -258,17 +279,17 @@ main {
     gap:1.5rem
 }
 .project_info{
-    font-size: 2rem;
+    
     color: #fcfcfc;
 }
 
 .technology{
-    font-size: 2rem;
+    
     color: #66FCF1;
 }
 
 .link_button{
-    font-size: 2rem;
+    
     text-decoration: none;
     padding: 1rem 1.5rem;
     border-radius: 0.7rem;
@@ -404,7 +425,7 @@ footer .fa-brands {
         font-size: 2.5rem;
     }
     .hamburger {
-        display: unset;
+        display: block;
     }
 
     .navLinkContainer {
@@ -448,6 +469,10 @@ footer .fa-brands {
     }
     
     /* Project Section */
+
+    .section_name{
+        font-size: 3rem;
+    }
     .project_item:nth-child(even) .project_description{
         flex-direction: column-reverse;
     }
@@ -498,4 +523,30 @@ footer .fa-brands {
     /* padding-top: 1rem;     */
     }
 
+}
+
+@media (max-width: 1050px){
+    
+    .addBreak{
+        display: inline;
+    }
+
+    .profile_picture{
+        object-fit: contain;
+    }
+    .project_list{
+        align-items: center;
+    }
+    .project_item:nth-child(even) .project_description{
+        flex-direction: column-reverse;
+    }
+    .project_description{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        /* margin-block-start: 2rem; */
+    }
+    .project_item{
+
+        max-width: 60rem;
+    }
 }
