@@ -1,0 +1,24 @@
+@mixin heading{
+    font-size: 3.5rem;
+    color: $secondary-font-color;
+    text-align: center;
+}
+
+@mixin subheading{
+    font-size: 2rem;
+    color: $primary-font-color;
+}
+ @mixin content($size,$space){
+    font-size: $size;
+    color: $primary-font-color;
+    max-width: 70ch;
+    letter-spacing: 0.1rem;
+    line-height: $space;
+ }
+
+ @mixin  flex-set($direction,$gap:0) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+ }
+
