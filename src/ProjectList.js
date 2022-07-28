@@ -15,15 +15,14 @@ class ProjectList {
         this.updateProjectsDom(data);
       })
       .catch((err) => {
-        console.log("Not able to find data");
+        console.log("Not able to find data",err);
       });
   }
 
   updateProjectsDom(projects) {
-    // const projectList = document.querySelector(".project_list");
-
+    const projectList = document.querySelector(".project_list");
     projects.forEach((element) => {
-      projects.appendChild(this.render(element));
+      projectList.appendChild(this.render(element));
       console.log("project element:", element);
     });
   }
@@ -53,20 +52,30 @@ class ProjectList {
     projectLink.classList.add("link_button");
     visitIcon.classList.add("fa-solid", "fa-link");
     imageDiv.classList.add("project_image");
-    projectImage.classList.add("prject-img");
+    projectImage.classList.add("project_img");
 
     // adding innertext and other attributes
     projectTitle.innerText = project.title;
-    projectContent.innerText = project.informartion;
-    technology.innerText = project.technology;
+    projectInfo.innerText = project.information;
+    technology.innerText = project.technoloy;
     projectLink.href = project.link;
     projectLink.target = "_blank";
     visitIcon.innerText = "VISIT ME";
     projectImage.src = `${project.image}`
     console.log("project link:", projectLink);
 
+    // Appending Child
+    projectItem.appendChild(projectTitle)
+    projectItem.appendChild(projectDescription)
+    projectDescription.appendChild(projectContent)
+    projectDescription.appendChild(imageDiv)
+    projectContent.appendChild(projectInfo)
+    projectContent.appendChild(technology)
+    projectContent.appendChild(projectLink)
+    projectLink.appendChild(visitIcon)
+    imageDiv.appendChild(projectImage)
 
-
+    return projectItem
   }
 }
 
