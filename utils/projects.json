@@ -1,9 +1,30 @@
 [
     {
-        "title": "Meta Africa Sports",
+        "title": " ARchiTECH",
+        "information" : "The application is capable of creating a 3D model of a given 2D plan.It first scans the given plan and then builds a corresponding 3D model by replacing the lines forming the rooms with actual walls.This process requires a 3D game engine to build the application; which in this case is Unity.",
+        "technoloy" : " Python-OpenCv-AugmentedReality-Unity",
+        "link" : "https://github.com/AbhijitTurate/AR-chi-Tech",
+        "image" : "./assets/projects/ArkeyTech.jpg"
+    },
+    {
+        "title": "FACE MASK DETECTION",
+        "information" : "Python: Real-time face mask Detection with Colab (GPU), Yolov3 and OpenCV Face Mask Detection system built with OpenCV, YOLOv3 using Computer Vision concepts in order to detect face masks in static images as well as videos. This system can therefore be used in real-time applications which require face-mask detection for safety purposes due to the outbreak of Covid-19.",
+        "technoloy" : "Python-OpenCv-YOLO-Colab",
+        "link" : "https://github.com/AbhijitTurate/fask-mask-detection",
+        "image" : "./assets/projects/face_mask_detection.png"
+    },
+    {
+        "title": "Evaluation of Housing Prices in California",
         "information" : "Meta Africa Sports is an elite sports brand that educates and develops current and future sports professionals of our community. We strive to use the power of sports and athletics to connect individuals from all around the globe and provide a platform for sports fans to achieve and share their personal goals.",
         "technoloy" : "HTML-SCSS-JS-JSON",
         "link" : "https://meta-africa-git-features-abhijitturate.vercel.app/",
         "image" : "./assets/projects/meta_africa.png"
+    },
+    {
+        "title": "Meta Africa Sports",
+        "information" : "In this project, I examine the housing prices in California to figure out what factors influence the prices the most.The intelligence will be relative for the companies to determine the income of the household, which can be utilized to incorporate the targeted ads.",
+        "technoloy" : "Python-MachineLearning-DataAnalysis-Pandas",
+        "link" : "https://github.com/AbhijitTurate/Evaluation-of-Housing-Prices-in-California",
+        "image" : "./assets/projects/california.png"
     }
 ]
