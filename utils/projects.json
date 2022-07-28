@@ -14,14 +14,14 @@
         "image" : "./assets/projects/face_mask_detection.png"
     },
     {
-        "title": "Evaluation of Housing Prices in California",
+        "title": "META AFRICA SPORTS",
         "information" : "Meta Africa Sports is an elite sports brand that educates and develops current and future sports professionals of our community. We strive to use the power of sports and athletics to connect individuals from all around the globe and provide a platform for sports fans to achieve and share their personal goals.",
         "technoloy" : "HTML-SCSS-JS-JSON",
         "link" : "https://meta-africa-git-features-abhijitturate.vercel.app/",
         "image" : "./assets/projects/meta_africa.png"
     },
     {
-        "title": "Meta Africa Sports",
+        "title": "Evaluation of Housing Prices in California",
         "information" : "In this project, I examine the housing prices in California to figure out what factors influence the prices the most.The intelligence will be relative for the companies to determine the income of the household, which can be utilized to incorporate the targeted ads.",
         "technoloy" : "Python-MachineLearning-DataAnalysis-Pandas",
         "link" : "https://github.com/AbhijitTurate/Evaluation-of-Housing-Prices-in-California",
