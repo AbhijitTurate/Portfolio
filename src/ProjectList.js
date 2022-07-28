@@ -39,6 +39,7 @@ class ProjectList {
     const technology = document.createElement("p");
     const projectLink = document.createElement("a");
     const visitIcon = document.createElement("i");
+    const visittext = document.createElement("span")
     const imageDiv = document.createElement("div");
     const projectImage = document.createElement("img");
 
@@ -60,7 +61,6 @@ class ProjectList {
     technology.innerText = project.technoloy;
     projectLink.href = project.link;
     projectLink.target = "_blank";
-    visitIcon.innerText = "VISIT ME";
     projectImage.src = `${project.image}`
     console.log("project link:", projectLink);
 
@@ -72,9 +72,11 @@ class ProjectList {
     projectContent.appendChild(projectInfo)
     projectContent.appendChild(technology)
     projectContent.appendChild(projectLink)
-    projectLink.appendChild(visitIcon)
+    // projectLink.appendChild(visitIcon)
     imageDiv.appendChild(projectImage)
-
+    // projectLink.innerHTML = visitIcon
+    projectLink.innerHTML = `<i class="fa-solid fa-link"></i>VISIT ME`
+    // projectLink.innerText = `VISIT ME`;
     return projectItem
   }
 }
