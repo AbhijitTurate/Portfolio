@@ -1,3 +1,9 @@
+import ProjectList from "./ProjectList.js";
+
+const project1 = new ProjectList()
+
+
+
 const hamburger=document.querySelector('.hamburger');
 const navlinks = document.querySelector('.navLinks');
 const links = document.querySelectorAll('navLink');
