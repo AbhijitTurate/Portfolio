@@ -1,6 +1,7 @@
 import ProjectList from "./ProjectList.js";
 
-const project1 = new ProjectList()
+const project = new ProjectList()
+project.render()
 
 
 
