@@ -7,14 +7,73 @@ class ProjectList {
   constructor() {
     this.isLoading = true;
     this.projectList = [];
+    this.projectMarkUp = document.createElement("div");
+    this.projectMarkUp.id = "#projectList-unique123";
   }
 
+  updatedRender() {
+    switch (this.isLoading) {
+      case true:
+        // return a spinner
 
+        const spinner = document.createElement("h1");
+        spinner.innerText = "Projects are loading ...";
+        this.projectMarkUp.appendChild(spinner);
+        break;
+
+      case false:
+        // return actual markup
+        // remove the spinner component
+        console.log("reached here -=======");
+        this.projectMarkUp.innerHTML = "";
+        // this.projectMarkUp = this.render();
+        this.projectList.forEach((project) => {
+          console.log("project", project);
+          console.log("project Markup ", this.getProjectMarkup(project));
+          this.projectMarkUp.appendChild(this.getProjectMarkup(project));
+        });
+
+        this.isLoading = false;
+        break;
+
+      default:
+        return;
+    }
+    // this can be optional
+    // if you want to maintain the api structure of Component.mount()
+    // you can return this.
+    // But in any case this is available in the this.projectMarkup
+    return this.projectMarkUp;
+  }
+
+  fetchData() {
+    return new Promise((resolve, reject) => {
+      fetch(projectLink)
+        .then((response) => response.json())
+        .then((projects) => {
+          // set the is loading state to false
+          console.log("Reached here project", projects);
+          this.projectList = [...projects];
+          this.isLoading = false;
+          // call the new render function
+          this.updatedRender();
+          resolve(this.projectMarkUp);
+        })
+        .catch((err) => {
+          console.log("Error in loading data");
+          // setting the isLoading state to true
+          this.isLoading = true;
+          // calling the render function
+          this.updatedRender();
+          reject(this.projectMarkUp);
+        });
+    });
+  }
 
   render() {
     const spinner = document.createElement("h1");
     spinner.innerText = "Spinner";
-    this.displayProjects(this.isLoading,spinner)
+    this.displayProjects(this.isLoading, spinner);
     this.url = projectLink;
     fetch(this.url)
       .then((response) => {
@@ -29,7 +88,10 @@ class ProjectList {
         this.allProjects = data;
 
         // projectList.appendChild(this.updateProjectsDom(this.allProjects));
-        this.displayProjects(this.isLoading,this.updateProjectsDom(this.allProjects))
+        this.displayProjects(
+          this.isLoading,
+          this.updateProjectsDom(this.allProjects),
+        );
       })
       .catch((err) => {
         console.log("Not able to find data", err);
@@ -38,18 +100,17 @@ class ProjectList {
     console.log("isLoading:", this.isLoading);
   }
 
-  displayProjects(condition,projectData) {
+  displayProjects(condition, projectData) {
     const projectList = document.querySelector(".project_list");
     if (condition) {
-      console.log("projectdata in displayProjects;",projectData);
+      console.log("projectdata in displayProjects;", projectData);
       // console.log(spinner);
-        projectList.innerHTML = ''
-        projectList.appendChild(projectData)
-    }
-    else{
+      projectList.innerHTML = "";
+      projectList.appendChild(projectData);
+    } else {
       console.log(projectData);
-      projectList.innerHTML = ""
-      projectList.appendChild(projectData)
+      projectList.innerHTML = "";
+      projectList.appendChild(projectData);
     }
   }
 
@@ -112,6 +173,24 @@ class ProjectList {
     projectLink.innerHTML = `<i class="fa-solid fa-link"></i>VISIT ME`;
     // projectLink.innerText = `VISIT ME`;
     return projectItem;
+  }
+
+  mount(el) {
+    // this is an asynchronous function.
+    this.fetchData()
+      .then(() => {
+        // since fetch data is not returning anything
+        // once that promise is resolved we will mount the project into the given element
+        if (el) {
+          console.log("Reached here", this.projectMarkUp);
+          el.appendChild(this.projectMarkUp);
+          return;
+        }
+        throw new Error("Cannot mount projects without parent container");
+      })
+      .catch((err) => {
+        console.log("Error in mounting the element ", err);
+      });
   }
 }
 

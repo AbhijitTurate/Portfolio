@@ -1,8 +1,12 @@
+// import ProjectList from "./ProjectList.js";
+
+// const project = new ProjectList()
+
+// project.render()
+
 import ProjectList from "./ProjectList.js";
 
-const project = new ProjectList()
+const root = document.getElementById("root");
+const projectList = new ProjectList();
 
-project.render()
-
-
-
+projectList.mount(root);
