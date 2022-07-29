@@ -2,7 +2,9 @@ import ProjectList from "./ProjectList.js";
 
 const project = new ProjectList()
 
-project.render()
+const rootDiv = document.querySelector(".root") 
+
+project.mount(rootDiv)
 
 
 
