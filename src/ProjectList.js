@@ -2,14 +2,18 @@
 // render()--> grabbing html markup and assigning values(innertext)
 // updateProjectsDom() --> loop through array and call render and mount
 
+ import {projectLink} from "./ApiEndPoint.js";
 class ProjectList {
 
     constructor(){
         this.isLoading = true;
+        this.projectList =[]
+        
     }
     render() {
-        this.url = "https://abhijitturate.github.io/Portfolio/utils/projects.json";
-    
+        this.url = projectLink;
+
+        
         fetch(this.url)
           .then((response) => {
             return response.json();
@@ -17,7 +21,8 @@ class ProjectList {
           .then((data) => {
             console.log("Project list", data);
             this.isLoading = false
-            this.updateProjectsDom(data);
+            this.projectList = data
+            this.updateProjectsDom(this.projectList);
           })
           .catch((err) => {
             console.log("Not able to find data",err);
@@ -48,7 +53,7 @@ class ProjectList {
         const imageDiv = document.createElement("div");
         const projectImage = document.createElement("img");
     
-        // adding class
+        // adding classes
         projectItem.classList.add("project_item");
         projectTitle.classList.add("project_title");
         projectDescription.classList.add("project_description");
